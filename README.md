@@ -1,2 +1,19 @@
-# liuxuan-studio-learning.github.io
-刘萱工作室・K12 互动教具库：英语、数学、地理可交互 HTML 教学产品，含拼豆绘本、闯关游戏与随堂练习。Xuan Studio — Interactive HTML teaching kits for K12: bead-art readers, level games and classroom drills.
+# 刘萱工作室 · K12 互动教具库
+
+刘萱工作室（Xuan Studio）的可交互 HTML 教具库：英语、数学、地理随堂练习与闯关游戏，单文件网页，手机打开即玩。
+
+## 在线体验
+
+**语法矿洞 · 初中语法闯关（体验版）**
+3 关 14 题，覆盖一般现在时、核心词汇英英释义、句子排序。三种题型、星级、钻石、音效均完整。不联网也能跑。
+
+https://liuxuan-studio.github.io/liuxuan-studio-learning.github.io/grammar-mine.html
+
+## 版本说明
+
+- 体验版：3 关 14 题，免费。
+- 完整版：8 关 51 题、40 星，含家长学习报告、A4 学习单、A4 结业证书、口语跟读场。单独授权，不随本仓库发布。
+
+## 声明
+
+本作品为独立教学产品，与 Mojang Studios、Microsoft 无关，不使用其官方素材。
