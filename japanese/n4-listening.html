@@ -184,7 +184,7 @@ body.has-wbar{padding-bottom:265px}
 .wbtns{display:flex;gap:6px;flex-wrap:wrap}
 .wfb{margin-top:7px;font-size:12px;line-height:1.65;color:#3E6B4E;display:none}
 .wfb.on{display:block}
-</style>
+.hsub .sno{color:#B7A492;letter-spacing:.14em;margin-left:6px;border-left:1px solid #DCCEB6;padding-left:7px}.sno{color:#B7A492;letter-spacing:.14em}.sfoot{display:inline-block;margin-top:6px;font-size:9.5px;letter-spacing:.22em;color:#C6B9A8}</style>
 </head>
 <body>
 <header>
@@ -192,7 +192,7 @@ body.has-wbar{padding-bottom:265px}
     <div class="htop">
       <div>
         <h1>N4 聴解 <em>精听练习器</em></h1>
-        <div class="hsub">点词发音 · 跟读对比 · 罗马音</div>
+        <div class="hsub">点词发音 · 跟读对比 · 罗马音<span class="sno" id="sno" style="display:none"></span></div>
       </div>
       <div class="hright">
         <div class="pill" id="methodBtn">方法</div>
@@ -225,7 +225,7 @@ body.has-wbar{padding-bottom:265px}
     </div>
   </div>
   <div class="banner" id="mban"></div>
-  <div class="foot">点字发音由设备日语语音合成提供　·　练习进度保存在本机</div>
+  <div class="foot">点字发音由设备日语语音合成提供　·　练习进度保存在本机<br><span class="sfoot" id="sfoot" style="display:none"></span></div>
 </main>
 
 <div class="sheet" id="sheet"></div>
@@ -985,5 +985,19 @@ document.getElementById('voice').onchange = e=>{ st.voice = e.target.value; save
 
 render();
 </script>
-</body>
+<script>
+(function(){
+  var m = location.search.match(/[?&]no=([^&]+)/) || location.hash.match(/no=([^&]+)/);
+  var raw = m ? decodeURIComponent(m[1]) : '';
+  raw = raw.replace(/[^0-9A-Za-z\-]/g,'').slice(0,10);
+  if(!raw) return;
+  var no = raw.replace(/^no/i,'');
+  if(/^\d+$/.test(no)) no = ('0000'+no).slice(-4);
+  var a = document.getElementById('sno');
+  if(a){ a.textContent = 'NO.' + no; a.style.display='inline'; }
+  var f = document.getElementById('sfoot');
+  if(f){ f.textContent = 'XUAN STUDIO 刘萱工作室　·　NO.' + no; f.style.display='inline-block'; }
+  document.title = 'N4 聴解 精听练习器 · NO.' + no;
+})();
+</script></body>
 </html>
