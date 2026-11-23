@@ -998,7 +998,7 @@
         </svg>
         <span class="num" id="diamondCount">0</span>
       </div>
-      <div class="lvl-chip" id="lvlChip">liuxuanEnglish</div>
+      <div class="lvl-chip" id="lvlChip">刘萱工作室</div>
       <button class="mute-btn" id="eyeBtn" type="button" aria-label="护眼模式">
         <svg viewBox="0 0 16 16" aria-hidden="true">
           <rect x="1" y="5" width="14" height="6" fill="#C8D3DE"/>
@@ -1081,7 +1081,7 @@
         <span class="sb-txt" id="sbTxt">进度自动保存</span>
         <button class="link-btn sb-link" id="linkBtn" type="button">续玩链接</button>
       </div>
-      <div class="brand"><span class="bdot"></span>liuxuanEnglish<span class="bdot2"></span></div>
+      <div class="brand"><span class="bdot"></span>刘萱工作室<span class="bdot2"></span></div>
       <div class="logo-row">
         <div class="blk b-grass"></div>
         <div class="blk b-dirt"></div>
@@ -1219,7 +1219,7 @@
   <div class="cert-paper" id="certPaper">
     <div class="cert-frame"></div>
     <div class="cert-inner">
-      <div class="cert-brand">liuxuanEnglish</div>
+      <div class="cert-brand">刘萱工作室</div>
       <div class="cert-kicker">Minecraft 语法矿洞 · 结业证书</div>
       <div class="cert-en">CERTIFICATE OF COMPLETION</div>
       <div class="cert-title">结 业 证 书</div>
@@ -1229,7 +1229,7 @@
       <div class="cert-body" id="certBody"></div>
       <div class="cert-tags" id="certTags"></div>
       <div class="cert-foot">
-        <div class="who">授课教师<b>刘老师</b><div class="bar"></div><span class="tip">liuxuanEnglish · HKDSE 备考</span></div>
+        <div class="who">授课教师<b>刘老师</b><div class="bar"></div><span class="tip">刘萱工作室 · HKDSE 备考</span></div>
         <div class="cert-seal" id="certSeal">
           <div class="s1">满 星</div>
           <div class="s2">通关</div>
@@ -1265,7 +1265,7 @@
         <div class="tc-row"><span>口语跟读场</span><span>—</span><span>有</span></div>
         <div class="tc-row"><span>满星金色末影龙</span><span>—</span><span>有</span></div>
       </div>
-      <div class="trial-note">获取方式：<b id="trialContact">微信：liuxuanEnglish</b><br>复制下面这段话发给老师即可开通。</div>
+      <div class="trial-note">获取方式：<b id="trialContact">微信：刘萱工作室</b><br>复制下面这段话发给老师即可开通。</div>
       <div class="code-actions">
         <button class="mini-btn primary" id="trialCopyBtn" type="button">复制开通信息</button>
         <button class="mini-btn" id="trialCloseBtn" type="button">先继续玩</button>
@@ -2424,7 +2424,7 @@ function updateHUD(){
   if (state.current >= 0 && scr.quiz.classList.contains("on")) {
     $("lvlChip").textContent = LEVELS[state.current].name + " · " + shortSub(LEVELS[state.current].sub);
   } else {
-    $("lvlChip").textContent = "liuxuanEnglish";
+    $("lvlChip").textContent = "刘萱工作室";
   }
 }
 
@@ -3043,7 +3043,7 @@ function reportText(r){
   lines.push("累计：" + r.passedLevels + " / " + LEVELS.length + " 关已完成。");
   lines.push("你才高一，骨架立住了，后面的路会越走越顺。你会越来越优秀——前途似锦。");
   lines.push("");
-  lines.push("—— liuxuanEnglish 刘老师");
+  lines.push("—— 刘萱工作室 · 刘老师");
   return lines.join("\n");
 }
 
@@ -3149,7 +3149,7 @@ function dailyText(d){
   lines.push("累计：" + d.passedLevels + " / " + LEVELS.length + " 关已完成。");
   lines.push("你才高一，骨架立住了，后面的路会越走越顺。你会越来越优秀——前途似锦。");
   lines.push("");
-  lines.push("—— liuxuanEnglish 刘老师");
+  lines.push("—— 刘萱工作室 · 刘老师");
   return lines.join("\n");
 }
 
@@ -3175,7 +3175,7 @@ function renderReport(lvIndex){
     '<div class="rp-sec">老师的话</div>' +
     '<div class="rp-cheer">' + cheerFor(r) +
       '<span class="rp-sign">你才高一，骨架立住了，后面的路会越走越顺。你会越来越优秀——前途似锦。</span>' +
-      '<span class="rp-brand">liuxuanEnglish · 刘老师</span></div>' +
+      '<span class="rp-brand">刘萱工作室 · 刘老师</span></div>' +
     '<div class="rp-sec">这节课练到的知识点</div>' +
     '<ul class="rp-list">' + r.points.map(function(pt){ return '<li>' + pt + '</li>'; }).join('') + '</ul>' +
     (r.wrongList.length
@@ -4089,7 +4089,7 @@ function sheetPaperHTML(sd){
     : '<div class="ss-none">这节课没有错题，全部一次答对。</div>';
   const cheer = sd.cheer;
   return '' +
-    '<div class="ss-top"><span class="ss-brand">liuxuanEnglish</span>' +
+    '<div class="ss-top"><span class="ss-brand">刘萱工作室</span>' +
       '<span class="ss-no">HKDSE ENGLISH &#183; LESSON REPORT</span></div>' +
     '<div class="ss-title">课后学习报告单</div>' +
     '<div class="ss-sub">LEARNING REPORT FOR PARENTS</div>' +
@@ -4109,7 +4109,7 @@ function sheetPaperHTML(sd){
       '<div class="ss-cheer">' + cheer +
         (sd.tip ? '<div class="ss-next">下一步：' + esc(sd.tip) + '</div>' : '') +
       '</div>' +
-      '<div class="ss-sign2">liuxuanEnglish &#183; 刘老师</div></div>' +
+      '<div class="ss-sign2">刘萱工作室 &#183; 刘老师</div></div>' +
     '<div class="ss-home"><b>这周在家练什么：</b>每天 5 分钟，把上面第四部分的题重做一遍，边做边说给自己听——为什么这里用这个形式。说对了才算会。</div>' +
     '<div class="ss-foot">' +
       '<div class="ss-note">家长签字 <span class="ss-line"></span>　日期 <span class="ss-line s"></span></div>' +
