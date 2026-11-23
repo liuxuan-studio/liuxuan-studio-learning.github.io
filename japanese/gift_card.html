@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<style>
+@page{size:A5 landscape;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:210mm;height:148mm;background:#FDFBF6}
+body{font-family:"Noto Serif CJK SC","Songti SC",serif;color:#2C3E50;position:relative;overflow:hidden}
+.page1{position:relative;width:210mm;height:148mm;overflow:hidden}
+.sheet{position:absolute;inset:0;padding:9mm 10mm;display:flex;gap:8mm}
+.frame{position:absolute;inset:5mm;border:1px solid #D9C9AE}
+.frame:after{content:"";position:absolute;inset:2mm;border:1px solid #EADFCB}
+.left{flex:1;display:flex;flex-direction:column;justify-content:center;padding:3mm 0 4mm 3mm;position:relative;z-index:2}
+.kicker{font-size:8.5pt;letter-spacing:.42em;color:#B08A5E}
+h1{font-size:30pt;line-height:1.28;font-weight:600;letter-spacing:.06em;margin-top:2mm}
+h1 em{font-style:normal;color:#C0503A}
+.sub{font-size:10pt;color:#6B6459;letter-spacing:.16em;margin-top:4mm}
+.rule{width:34mm;height:1px;background:#C9B79A;margin:6mm 0 4mm}
+.to{font-size:10.5pt;color:#6B6459;letter-spacing:.1em}
+.to i{font-style:normal;display:inline-block;min-width:34mm;border-bottom:1px dashed #C0AE92;margin-left:2mm;height:4.2mm}
+.tips{font-size:8.5pt;color:#8B8175;line-height:2.1;letter-spacing:.04em}
+.tips b{color:#C0503A;font-weight:600}
+.sign{margin-top:9mm;font-size:9.5pt;color:#7A6E5D;letter-spacing:.12em}
+.quote{margin-top:11mm;font-size:9pt;color:#8A7C68;letter-spacing:.1em;line-height:1.9}
+.quote span{display:block;font-size:7.6pt;color:#B0A392;letter-spacing:.04em;margin-top:1.5mm}
+.right{width:66mm;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4mm;position:relative;z-index:2}
+.qrbox{background:#fff;padding:3.2mm;border:1px solid #DCCEB6;box-shadow:0 2px 10px rgba(140,115,80,.10)}
+.qrbox img{width:47mm;height:47mm;display:block}
+.scan{font-size:9pt;letter-spacing:.14em;color:#2C3E50;text-align:center}
+.scan span{display:block;font-size:7.6pt;color:#9A8F80;letter-spacing:.06em;margin-top:1mm}
+.stamp{position:absolute;right:13mm;bottom:13mm;width:15mm;height:15mm;border:1.4px solid #C0503A;border-radius:50%;color:#C0503A;font-size:7pt;line-height:1.35;display:flex;align-items:center;justify-content:center;text-align:center;letter-spacing:.1em;transform:rotate(-8deg);opacity:.85}
+.meta{position:absolute;left:12mm;bottom:10.5mm;font-size:7pt;color:#B3A796;letter-spacing:.18em}
+.break{page-break-before:always;height:0}
+.back{width:210mm;height:147.6mm;position:relative;background:#FDFBF6;page-break-before:always}
+.bpad{position:absolute;inset:16mm 18mm;display:flex;flex-direction:column}
+.bkicker{font-size:7.6pt;letter-spacing:.4em;color:#B08A5E}
+h2{font-size:17pt;font-weight:600;letter-spacing:.08em;margin-top:3mm}
+.steps{margin-top:8mm;display:flex;flex-direction:column;gap:5mm}
+.step{font-size:10pt;color:#4A453D;line-height:1.9;letter-spacing:.03em}
+.step span{display:inline-block;width:5.4mm;height:5.4mm;border:1px solid #C0503A;border-radius:50%;color:#C0503A;font-size:7pt;text-align:center;line-height:5.4mm;margin-right:3mm}
+.letter{margin-top:7mm;font-size:10pt;color:#6B6459;line-height:2.1;letter-spacing:.04em}
+.bsign{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:8pt;color:#B3A796;letter-spacing:.14em}
+.bsign .sig{color:#7A6E5D;letter-spacing:.1em}
+</style></head><body>
+<div class="page1"><div class="frame"></div>
+<div class="sheet">
+  <div class="left">
+    <div>
+      <div class="kicker">JLPT N4 ・ 聴 解</div>
+      <h1>把耳朵<br><em>练出来</em></h1>
+      <div class="sub">28 題 精听练习器</div>
+      <div class="rule"></div>
+      <div class="to">致 <i></i>　同学</div>
+      <div class="tips">
+        每句可点读 · 有假名和罗马音<br>
+        <b>跟读录音</b>后会听到自己的声音，并得到一句鼓励<br>
+        一天三题，十五分钟，先听再读
+      </div>
+    </div>
+    <div class="sign">—— 陪你练听力的人　2026.11</div>
+    <div class="quote">耳は、毎日すこしずつ育つ。<span>听力是每天一点点长出来的</span></div>
+  </div>
+  <div><div class="right">
+    <div class="qrbox"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAuQAAALkCAIAAADIxrcyAAARmklEQVR4nO3YwW0ryRVAUctgPgyCWTBAZsEgmIw2ggAvvBtgPPwsme+W+px9o15Xd5MX9fH99fkvAICqf08PAADwv4gVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJB2mlr4fLlOLc2THvfby9fu+Hyn7vdo+zxlZZ9X7Phu7LhXvMfUu+FkBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0k7TA7zicb9Nj7CN8+U6su7KM5qaeWrdFTt+Cyv7vON7NWVqr6beyR2/hSk7fgtOVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIO00PcC7nS/X6RH+2ON+mx7hrVbud+X5Tq2748wr6x7tfV6x4+/Vjnbc56N9R05WAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAg7TQ9AL/T+XIdWfdxv7187crMK+uuONrMU6b2CvgvJysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJB2mh4A/upxv02P8MfOl+vL1+54vytW7ndln1dMrTvlaO8kfU5WAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAg7TQ9wLs97rfpEfgH58v15Wunnu/Kuiv3O2XqGU3t89F+N462VzvOfDROVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIO00PcArzpfr9Aj8Hz3ut5evXXk3jrbujnbc5x3X3dHRvoWjcbICAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpH99fn9Mz8AudL9eXr33cbz84yXtM3e/KujuyV8/b8TuCv+NkBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0k5TC58v15evfdxvPzjJe0zd78q6U6Zm3vG92nHmHd/JHdnnvqnvd8f/XycrAECaWAEA0sQKAJAmVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQ9vH99Tk9wx87X64vX/u4335wkt9tx32emnll3aOZ2uejrbtix72asuO3v+M+O1kBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIC009TC58t1u3Uf99sPTvK8qb2acrT7Pdp7teM3uOO6U893aq92tOPzneJkBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANLECgCQJlYAgDSxAgCkiRUAIE2sAABpYgUASBMrAECaWAEA0j6+vz6nZ/hj58v15Wsf99sPTvK8lZlX7Hi/O868YuV+7fN7TD2jFVPPl/c42nvlZAUASBMrAECaWAEA0sQKAJAmVgCANLECAKSJFQAgTawAAGliBQBIEysAQJpYAQDSxAoAkCZWAIA0sQIApIkVACBNrAAAaWIFAEgTKwBAmlgBANJOUwufL9eppV82NfPjfnv52h1nnjI189QzWll3Za92fJ+PZurdONrznfqOduRkBQBIEysA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"></div>
+    <div class="scan">扫 码 开 始<span>手机微信扫码 · 无需下载</span></div>
+  </div></div>
+</div>
+<div class="stamp">聴<br>解</div></div>
+<div class="back">
+  <div class="frame"></div>
+  <div class="bpad">
+    <div class="bkicker">HOW  TO  USE</div>
+    <h2>怎么用这张卡</h2>
+    <div class="steps">
+      <div class="step"><span>一</span>扫码打开，选「問題１」，一天只做三题。</div>
+      <div class="step"><span>二</span>先合上罗马音盲听一遍，再点开假名逐句听。</div>
+      <div class="step"><span>三</span>按住麦克风跟读，听完自己的录音，再听标准音，找出差在哪。</div>
+    </div>
+    <div class="rule"></div>
+    <div class="letter">
+      听力不是听懂每个词，是抓住「谁、什么时候、做了什么」。<br>
+      听不懂的时候不要倒回去看原文，先把整句听完，再回头看。<br>
+      一天十五分钟，坚持一个月，考场上会听见不一样的东西。
+    </div>
+    <div class="bsign"><span class="sig">—— 陪你练听力的人　2026.11</span>共 28 题　問題１—４　备考 N4</div>
+  </div>
+</div>
+</body></html>
